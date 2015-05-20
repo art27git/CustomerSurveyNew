@@ -1,0 +1,66 @@
+/* FUENTES */
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
+/* font-family: 'Open Sans', sans-serif; */
+
+/* GENERALES */
+html { background: url('../img/fondo.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+body { padding: 0; margin: 0; font-family: 'Open Sans', sans-serif;  }
+ul { padding: 0; margin: 0; }
+li { list-style: none; }
+
+.clear { clear: both; height: 0; }
+
+/* CONTENEDOR FORMULARIO */
+.contenedor { display: block; position: absolute; width: 780px; height: 532px; left: calc((100% - 780px) / 2); top: calc((100% - 532px) / 2); position: relative; float: left; }
+.conte_titulo { font-size: 20px; color: #FFFFFF; background: #0099cc; border-bottom: 2px solid #0080b3;background-color: #0099cb; -moz-box-shadow: inset 0 -3px 0 rgba(29,26,31,.11); -webkit-box-shadow: inset 0 -3px 0 rgba(29,26,31,.11); box-shadow: inset 0 -3px 0 rgba(29,26,31,.11); padding: 10px 0px 10px 80px; }
+.conte_formulario { width: 618px; margin-top: 9px; overflow: hidden; position: absolute; height: 432px;
+padding: 40px 80px 0px 80px; background: #FFF; border-bottom: 2px solid #61b51d; }
+.sombra_contenedor { background: url('../img/sombra_contenedor.png') no-repeat; width: 780px; position: absolute; bottom: -9; height: 10px; z-index: -1; }
+.focos { overflow: hidden; }
+.focos li { float: left; margin-right: 50px; cursor: pointer; }
+.preguntas {  }
+.img_enfermera { position: absolute; top: 90px; right: -100px; }
+label { color: #333; font-size: 16px; display: block; margin-top: 40px; }
+input[type="text"] { width: 100%; height: 41px; border: 1px solid #bfbfbf; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; background-color: #fff; color: #595959; font-size: 16px; padding-left: 20px; padding-right: 20px; margin-top: 9px; }
+textarea { width: 100%; height: 100px; resize: none; border: 1px solid #bfbfbf; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; background-color: #fff; color: #595959; font-size: 16px; padding: 20px 20px 0px 20px; margin-top: 9px; font-family: 'Open Sans', sans-serif; }
+input[type="submit"] { width: 220px; height: 34px; margin-top: 20px; font-size: 18px; color: #fff; font-family: 'Open Sans', sans-serif; text-transform: uppercase; background: #0099cc; border: none; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; background-color: #0099cb; -moz-box-shadow: inset 0 -3px 0 rgba(29,26,31,.08); -webkit-box-shadow: inset 0 -3px 0 rgba(29,26,31,.08); box-shadow: inset 0 -3px 0 rgba(29,26,31,.08); cursor: pointer; }
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+    .contenedor { width: 300px; height: 532px; margin: 0px auto; left: 0; top: 0; float: none; }
+    .conte_titulo { padding: 10px 0px 10px 20px; font-size: 18px; }
+    .conte_formulario { width: 93%; padding: 40px 10px 0px 10px; }
+    .focos { position: relative; z-index: 1; }
+    .focos li { margin-right: 0px; padding-left: 20px; }
+    .img_enfermera { display: none; }
+    .sombra_contenedor { width: 300px; background-size: contain; bottom: 0; height: 4px; }
+    input[type="submit"] { display: block; margin: 27px auto; }
+}
+@media screen and (min-width: 480px) and (max-width: 599px) {
+    .contenedor { width: 450px; height: 532px; margin: 0px auto; left: 0; top: 0; float: none; }
+    .conte_titulo { padding: 10px 0px 10px 20px; font-size: 18px; }
+    .conte_formulario { width: 95%; padding: 40px 10px 0px 10px; }
+    .focos { position: relative; z-index: 1; width: 300px; margin: 0px auto; }
+    .focos li { margin-right: 0px; padding-left: 20px; }
+    .img_enfermera { display: none; }
+    .sombra_contenedor { width: 300px; background-size: contain; bottom: 0; height: 4px; }
+    input[type="submit"] { display: block; margin: 27px auto; }
+}
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+    .contenedor { width: 550px; height: 532px; margin: 0px auto; left: 0; top: 0; float: none; }
+    .conte_titulo { padding: 10px 0px 10px 20px; font-size: 18px; }
+    .conte_formulario { width: 96%; padding: 40px 10px 0px 10px; }
+    .focos { position: relative; z-index: 1; width: 300px; margin: 0px auto; }
+    .focos li { margin-right: 0px; padding-left: 20px; }
+    .img_enfermera { display: none; }
+    .sombra_contenedor { width: 300px; background-size: contain; bottom: 0; height: 4px; }
+    input[type="submit"] { display: block; margin: 27px auto; }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+}
+@media (min-width: 1440px){
+
+}

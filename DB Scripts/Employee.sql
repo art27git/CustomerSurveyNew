@@ -1,6 +1,3 @@
-USE [CustomerSurvey]
-GO
-
 /****** Object:  Table [dbo].[Employee]    Script Date: 05/08/2015 12:19:19 ******/
 SET ANSI_NULLS ON
 GO
