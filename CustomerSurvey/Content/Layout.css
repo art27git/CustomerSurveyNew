@@ -1,0 +1,306 @@
+﻿/* Generic Styles */
+.indexlink {
+    margin-top: 10px;
+}
+
+.editor-label {
+    
+}
+
+.ui-datepicker-div {
+    z-index: 1006 !important;
+}
+
+
+.display-field {
+    color: #666666;
+}
+
+.extraFields,.content {
+    background-color: #F9F9F9;
+    padding: 8px;
+}
+
+.mainFields {
+    overflow: hidden;
+}
+
+.mainFields .threeCol {
+    padding-bottom: 500px;
+    margin-bottom: -492px;
+}
+
+
+.threeCol{
+    float: left;
+    width: 337px;
+    margin-left: 8px;
+    background-color: #F9F9F9;
+    padding: 8px;
+    height: 100%;
+    position: relative;
+
+}
+
+#addKeyword {
+    position: absolute;
+    right: 6px;
+    top: 33px;
+    width:30px;
+    text-align:center
+
+}
+
+
+.threeCol input, .threeCol .intro textarea, .mainFields .threeCol textarea {
+    width: 96%;
+    padding: 5px 2%;
+}
+
+.checkbox {
+    font-weight: 100;
+    font-size: 1em;
+}
+
+    .threeCol input[type=checkbox] {
+        width: auto;
+        padding-left: 20px;
+        margin-right: 4px;
+        float: none;
+        vertical-align: top;
+    }
+.threeCol select {
+    width: 100%;
+}
+
+.primaryContent .threeCol .intro textarea{
+    height: 150px;
+}
+
+
+.articleCategories .threeCol {
+    height: 380px;
+}
+
+.pageactionlinks {
+    margin-top: 15px;
+}
+
+.pageactionlinks a {
+    margin-right: 15px;
+}
+
+
+@media all and (min-width: 740px)  {
+.threeCol:nth-child(1){
+    margin-left: 0;
+}
+}
+
+
+/* Article Search Page */
+#articleSearchForm {
+    width: 80%;
+    display: inline;
+}
+
+#articleSearchForm #keywordList {
+    font-size: 1.2em;
+}
+
+
+#articleSearchForm .searchFields .extraFields {
+    width: 50%;
+    height: 150px;
+    float: right;
+}
+
+#articleSearchForm .metadata {
+    margin-top: 15px;
+}
+
+
+
+
+/* Article Create Page */
+#articleCreateForm {
+    width: 80%;
+    display: inline;
+}
+
+#articleCreateForm .mainFields {
+    clear: both;
+}
+
+#articleCreateForm .extraFields {
+    width: 30%;
+    float: right;
+}
+
+#articleSectionCategoryItemsTree, #articleLeadSectionCategoryItemsTree, #premiumNewsTypeCategoryItemsTree, #articleAircraftTypeCategoryItemsTree, #articleRegionCategoryItemsTree {
+    width: 350px;
+}
+
+#articleSectionCategoryItemsTree, #articleLeadSectionCategoryItemsTree, #articleAircraftTypeCategoryItemsTree, #articleRegionCategoryItemsTree, #premiumNewsTypeCategoryItemsTree {
+    height: 350px;
+    margin-bottom: 20px;
+}
+
+#articleAircraftTypeCategoryItemsTree, #articleRegionCategoryItemsTree, #articleCategoriesItemsTree {
+    height: 271px;
+    margin-bottom: 20px;
+}
+
+#articleCreateForm .mainFields #articleThumbnailImage {
+    vertical-align: top;
+}
+
+#organisationSelector {
+    height: 206px;
+    margin-bottom: 20px;
+}
+
+.redactor_editor {
+    max-height: 400px;
+}
+
+#redactor_tabs {
+    display: none;
+}
+
+#redactor_tab3 a.primary_link {
+    margin-right: 30px;
+}
+
+#redactor_tab3 a.secondary_link {
+    margin-left: 30px;
+}
+
+#redactor_tab3 .links { 
+    margin-bottom: 25px;
+}
+
+
+
+
+
+/* Article Edit Page */
+#articleEditForm {
+    width: 80%;
+    display: inline;
+}
+
+
+#articleEditForm .extraFields {
+    width: 30%;
+    float: right;
+}
+
+#articleEditForm .mainFields #articleThumbnailImage {
+    vertical-align: top;
+}
+
+#articleThumbnailImage {
+    float: right;
+}
+
+/* Article Delete Page */
+
+
+/* Article Pull Page */
+
+
+/* Article Preview Page */
+
+div div.editor-label, div .display-label {
+    margin-top: 16px;
+}
+
+div div.editor-label:nth-child(1), div div.display-label:nth-child(1) {
+    margin-top: 0;
+}
+
+#keywordListLabel, #keywordListActions {
+    display: none;
+}
+
+#keywordListActions {
+    margin-top: 15px;
+}
+
+#keywordListActions #eraseKeywords img {
+    vertical-align: middle;
+}
+
+.modalLink {
+    color: #199e8e !important;
+}
+
+.modal {
+    width: 650px !important;
+}
+
+#addOrSearchAssetsDiv {
+    width: 80% !important;
+    height: 80% !important;
+    margin-left: -500px !important;
+    /*width: 900px !important; /* SET THE WIDTH OF THE MODAL */
+	/*margin: -250px 0 0 -450px !important; /* CHANGE MARGINS TO ACCOMODATE THE NEW WIDTH (original = margin: -250px 0 0 -280px;) */
+}
+
+#articleSearchResults .headline {
+    width: 400px;
+}
+
+#articleSearchResults .links {
+    width: 160px;
+}
+
+#articleList .articleID, #container-grid .articleID {
+    width: 10%;
+}
+
+#articleList .headline, #container-grid .headline {
+    width: 30%;
+}
+
+#articleList .articleStatus, #container-grid .articleStatus {
+    width: 10%;
+}
+
+#articleList .lastmodified, #container-grid .lastmodified {
+    width: 15%;
+}
+
+#articleList .lastmodifiedby, #container-grid .lastmodifiedby {
+    width: 15%;
+}
+
+#articleList .actions, #container-grid .actions {
+    width: 20%;
+}
+
+#sBody_tbl {
+    width: 700px !important;
+}
+
+#sBody_ifr {
+    height: 1000px !important;
+}
+
+
+/* Asset Listing Page */
+#assetList {
+    margin-top: 10px;
+}
+
+.copy-button {
+    display: none;
+}
+
+/* Asset Details Page */
+
+
+/* Asset Search Page */
+
+

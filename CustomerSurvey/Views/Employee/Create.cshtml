@@ -1,0 +1,35 @@
+﻿@model CustomerSurvey.Dto.Employee
+
+@{
+    ViewBag.Title = "Add Employee";
+}
+
+<h3>Generate unique link</h3>
+<br />
+
+<div class="largeBreak"></div>
+@using (Html.BeginForm("Create", "Employee", FormMethod.Post, new { enctype = "multipart/form-data", id = "employeeCreateForm" }))
+{
+    @Html.ValidationSummary(true)
+    <div class="mainFields">
+        <div class="threeCol">
+            <div class="editor-label">
+                @Html.LabelFor(model => model.FirstName)
+            </div>
+
+            <div class="editor-field">
+                @Html.EditorFor(model => model.FirstName)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.LastName)
+            </div>
+
+            <div class="editor-field">
+                @Html.EditorFor(model => model.LastName)
+            </div>
+        </div>
+    </div>
+    <input type="submit" value="Add" class="employeeCreateButton" />
+    
+}

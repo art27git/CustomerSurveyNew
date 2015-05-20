@@ -1,0 +1,35 @@
+﻿@using System.Collections.Generic
+
+@model List<CustomerSurvey.Dto.Employee>
+
+@{
+    ViewBag.Title = "Categories";
+}
+
+<h2>Categories</h2>
+@Html.ActionLink("Add Employee", "Create", "Employee")
+
+@{
+    WebGrid grid = new WebGrid(rowsPerPage: 25, ajaxUpdateContainerId: "container-grid");
+    grid.Bind(Model,
+              autoSortAndPage: false,
+              rowCount: Model.Count
+    ); 
+}
+
+
+<div id="container-grid">
+@grid.GetHtml(
+    fillEmptyRows: false,
+    alternatingRowStyle: "alternate-row",
+    headerStyle: "grid-header",
+    footerStyle: "grid-footer",
+    mode: WebGridPagerModes.All,
+    firstText: "<< First",
+    previousText: "< Prev",
+    nextText: "Next >",
+    lastText: "Last >>",
+     columns: new[] {
+        grid.Column("Name", header: "Name", canSort: false)
+        })
+    </div>

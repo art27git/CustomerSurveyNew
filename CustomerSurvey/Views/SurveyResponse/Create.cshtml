@@ -1,0 +1,51 @@
+﻿@using System.Web.Mvc
+@using System.Web.Mvc.Html
+@model CustomerSurvey.Dto.SurveyResponse
+
+@{
+    ViewBag.Title = "Survey feedback for Bayer";
+}
+
+<h2>How helpful was my reply?</h2>
+<br />
+
+<div class="largeBreak"></div>
+@using (Html.BeginForm("Create", "SurveyResponse", FormMethod.Post, new { enctype = "multipart/form-data", id = "surveyResponseCreateForm" }))
+{
+    @Html.ValidationSummary(true)
+    <div class="mainFields">
+        <div class="threeCol">
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Rating)
+            </div>
+
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Rating)
+                @Html.ValidationMessageFor(model => model.Rating)
+            </div>
+            
+            <div class="editor-label">
+                @Html.LabelFor(model => model.HospitalName)
+            </div>
+
+            <div class="editor-field">
+                @Html.EditorFor(model => model.HospitalName)
+            </div>
+            
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Comments)
+            </div>
+
+            <div class="editor-field">
+                @Html.TextAreaFor(model => model.Comments)
+            </div>
+
+            <div class="editor-label">
+                @Html.EditorFor(model => model.CallBack)
+                @Html.LabelFor(model => model.CallBack)
+            </div>
+        </div>
+    </div>
+    <input type="submit" value="SEND RATING" />
+    
+}
