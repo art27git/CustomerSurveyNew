@@ -31,6 +31,7 @@ namespace CustomerSurvey.Controllers
         [HttpPost]
         public ActionResult Create(SurveyResponse surveyResponse)
         {
+            surveyResponse.Rating = "Good";
             siteRepository.AddSurveyResponse(surveyResponse);
             return RedirectToAction("Complete");
         }

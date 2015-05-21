@@ -1,51 +1,42 @@
 ﻿@using System.Web.Mvc
 @using System.Web.Mvc.Html
 @model CustomerSurvey.Dto.SurveyResponse
-
 @{
     ViewBag.Title = "Survey feedback for Bayer";
 }
 
-<h2>How helpful was my reply?</h2>
-<br />
-
-<div class="largeBreak"></div>
 @using (Html.BeginForm("Create", "SurveyResponse", FormMethod.Post, new { enctype = "multipart/form-data", id = "surveyResponseCreateForm" }))
 {
     @Html.ValidationSummary(true)
-    <div class="mainFields">
-        <div class="threeCol">
-            <div class="editor-label">
-                @Html.LabelFor(model => model.Rating)
-            </div>
+    <div class="contenedor">
+        <div class="conte_titulo">How helpful was my reply?</div>
+        <div class="conte_formulario">
+            <ul class="focos">
+                <li class="foco_1">
+                    <img src="/Content/images/foco_1_a.png" /></li>
+                <li class="foco_2">
+                    <img src="/Content/images/foco_2_a.png" /></li>
+                <li class="foco_3">
+                    <img src="/Content/images/foco_3_a.png" /></li>
+            </ul>
 
-            <div class="editor-field">
-                @Html.EditorFor(model => model.Rating)
-                @Html.ValidationMessageFor(model => model.Rating)
-            </div>
-            
-            <div class="editor-label">
+            <div class="preguntas">
                 @Html.LabelFor(model => model.HospitalName)
-            </div>
+                @Html.TextBoxFor(model => model.HospitalName, new {@placeholder = "Hospital"})
 
-            <div class="editor-field">
-                @Html.EditorFor(model => model.HospitalName)
-            </div>
-            
-            <div class="editor-label">
                 @Html.LabelFor(model => model.Comments)
-            </div>
+                <div class="clear"></div>
+                @Html.TextAreaFor(model => model.Comments, new {@placeholder = "Comments"})
 
-            <div class="editor-field">
-                @Html.TextAreaFor(model => model.Comments)
-            </div>
-
-            <div class="editor-label">
-                @Html.EditorFor(model => model.CallBack)
                 @Html.LabelFor(model => model.CallBack)
+                @Html.CheckBoxFor(model => model.CallBack)Yes
+
             </div>
+            <input type="submit" value="send rating">
         </div>
+
+        <div class="img_enfermera">
+            <img src="/Content/images/enfermera.png" /></div>
+        <div class="sombra_contenedor"></div>
     </div>
-    <input type="submit" value="SEND RATING" />
-    
 }
