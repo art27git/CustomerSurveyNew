@@ -11,7 +11,7 @@ namespace CustomerSurvey.Dto
         public int ID { get; set; }
 
         [Required]
-        [DisplayName("Rating *")]
+        [DisplayName("Rating")]
         public string Rating { get; set; }
 
         [DisplayName("Hospital/clinic name")]

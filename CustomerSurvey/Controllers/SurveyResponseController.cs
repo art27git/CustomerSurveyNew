@@ -31,7 +31,10 @@ namespace CustomerSurvey.Controllers
         [HttpPost]
         public ActionResult Create(SurveyResponse surveyResponse)
         {
-            surveyResponse.Rating = "Good";
+            if (string.IsNullOrWhiteSpace(surveyResponse.Rating))
+            {
+                return View("Create");
+            }
             siteRepository.AddSurveyResponse(surveyResponse);
             return RedirectToAction("Complete");
         }

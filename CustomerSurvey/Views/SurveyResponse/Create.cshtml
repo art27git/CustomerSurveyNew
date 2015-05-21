@@ -13,12 +13,14 @@
         <div class="conte_formulario">
             <ul class="focos">
                 <li class="foco_1">
-                    <img src="/Content/images/foco_1_a.png" /></li>
+                    <img src="/Content/images/foco_1_a.png"/></li>
                 <li class="foco_2">
-                    <img src="/Content/images/foco_2_a.png" /></li>
+                    <img src="/Content/images/foco_2_a.png"/></li>
                 <li class="foco_3">
-                    <img src="/Content/images/foco_3_a.png" /></li>
+                    <img src="/Content/images/foco_3_a.png"/></li>
             </ul>
+            @Html.HiddenFor(model => model.Rating)
+            @Html.ValidationMessageFor(model => model.Rating)
 
             <div class="preguntas">
                 @Html.LabelFor(model => model.HospitalName)
