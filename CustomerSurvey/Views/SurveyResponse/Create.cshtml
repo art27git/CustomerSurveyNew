@@ -9,7 +9,7 @@
 {
     @Html.ValidationSummary(true)
     <div class="contenedor">
-        <div class="conte_titulo">How helpful was my reply?</div>
+        <div class="conte_titulo">How satisfied are you with our services?</div>
         <div class="conte_formulario">
             <ul class="focos">
                 <li class="foco_1">
@@ -24,15 +24,10 @@
 
             <div class="preguntas">
                 @Html.LabelFor(model => model.HospitalName)
-                @Html.TextBoxFor(model => model.HospitalName, new {@placeholder = "Hospital"})
+                @Html.TextBoxFor(model => model.HospitalName, new {@placeholder = "Hospital/Clinic"})
 
                 @Html.LabelFor(model => model.Comments)
-                <div class="clear"></div>
                 @Html.TextAreaFor(model => model.Comments, new {@placeholder = "Comments"})
-
-                @Html.LabelFor(model => model.CallBack)
-                @Html.CheckBoxFor(model => model.CallBack)Yes
-
             </div>
             <input type="submit" value="send rating">
         </div>
