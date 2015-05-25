@@ -14,7 +14,7 @@ namespace CustomerSurvey.Domain.Repositories
 
         public IEnumerable<SurveyResponse> GetAllSurveyResponses()
         {
-            var result = db.Database.SqlQuery<SurveyResponse>("exec up_getSites").ToList();
+            var result = db.Database.SqlQuery<SurveyResponse>("exec up_getSurveyResponses").ToList();
             return result;
         }
 

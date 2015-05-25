@@ -1,0 +1,39 @@
+﻿@using System.Collections.Generic
+@using System.Configuration
+
+@model List<CustomerSurvey.Dto.SurveyResponse>
+
+@{
+    ViewBag.Title = "Survey Responses - Basic Reports";
+}
+
+<h2>Survey Responses - Basic Reports</h2>
+<br/><br/>
+
+@{
+    WebGrid grid = new WebGrid(rowsPerPage: 100, ajaxUpdateContainerId: "container-grid");
+    grid.Bind(Model,
+              autoSortAndPage: false,
+              rowCount: Model.Count
+    ); 
+}
+
+
+<div id="container-grid">
+@grid.GetHtml(
+    fillEmptyRows: false,
+    alternatingRowStyle: "alternate-row",
+    headerStyle: "grid-header",
+    footerStyle: "grid-footer",
+    mode: WebGridPagerModes.All,
+    firstText: "<< First",
+    previousText: "< Prev",
+    nextText: "Next >",
+    lastText: "Last >>",
+     columns: new[] {
+        grid.Column("Rating", header: "Rating", canSort: false),
+        grid.Column("HospitalName", header: "Hospital/Clinic Name", canSort: false),
+        grid.Column("Comments", header: "Comments", canSort: false),
+        grid.Column("EmployeeName", header: "Employee Name", canSort: false)
+        })
+    </div>

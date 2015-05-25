@@ -11,9 +11,6 @@ namespace CustomerSurvey.Dto
         public int ID { get; set; }
 
         [Required]
-        public int EmployeeID { get; set; }
-
-        [Required]
         [DisplayName("Rating")]
         public string Rating { get; set; }
 
@@ -22,5 +19,7 @@ namespace CustomerSurvey.Dto
 
         [DisplayName("Any comments?")]
         public string Comments { get; set; }
+
+        public string EmployeeName { get; set; }
     }
 }
