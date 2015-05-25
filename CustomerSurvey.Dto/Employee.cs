@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Configuration;
 
 namespace CustomerSurvey.Dto
 {
@@ -15,5 +16,13 @@ namespace CustomerSurvey.Dto
         [Required]
         [DisplayName("Last Name *")]
         public string LastName { get; set; }
+
+        [Required]
+        [DisplayName("Unique Link")]
+        public string UniqueLink {
+            get
+            {
+                return WebConfigurationManager.AppSettings["Site.BaseUrl"] + "/SurveyResponse/Create/" + ID.ToString();
+            }}
     }
 }

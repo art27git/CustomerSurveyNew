@@ -1,16 +1,18 @@
 ﻿@using System.Collections.Generic
+@using System.Configuration
 
 @model List<CustomerSurvey.Dto.Employee>
 
 @{
-    ViewBag.Title = "Categories";
+    ViewBag.Title = "Unique links for employees";
 }
 
-<h2>Categories</h2>
-@Html.ActionLink("Add Employee", "Create", "Employee")
+<h2>Unique links for employees</h2>
+@Html.ActionLink("Add Unique Link", "Create", "Employee")
+<br/><br/>
 
 @{
-    WebGrid grid = new WebGrid(rowsPerPage: 25, ajaxUpdateContainerId: "container-grid");
+    WebGrid grid = new WebGrid(rowsPerPage: 100, ajaxUpdateContainerId: "container-grid");
     grid.Bind(Model,
               autoSortAndPage: false,
               rowCount: Model.Count
@@ -30,6 +32,8 @@
     nextText: "Next >",
     lastText: "Last >>",
      columns: new[] {
-        grid.Column("Name", header: "Name", canSort: false)
+        grid.Column("FirstName", header: "First Name", canSort: false),
+        grid.Column("LastName", header: "Last Name", canSort: false),
+        grid.Column(null, "Unique Link", format: (item) => new HtmlString("<a href='" + item.UniqueLink + "'>" + item.UniqueLink +"</a>"))
         })
     </div>

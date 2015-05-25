@@ -9,31 +9,28 @@
 {
     @Html.ValidationSummary(true)
     <div class="contenedor">
-        <div class="conte_titulo">How satisfied are you with our services?</div>
-        <div class="conte_formulario">
-            <ul class="focos">
-                <li class="foco_1">
-                    <img src="/Content/images/foco_1_a.png"/></li>
-                <li class="foco_2">
-                    <img src="/Content/images/foco_2_a.png"/></li>
-                <li class="foco_3">
-                    <img src="/Content/images/foco_3_a.png"/></li>
+        <div class="title">How satisfied are you with our services?</div>
+            <ul class="ico_califica">
+                <li class="ico_1">
+                    <img src="/Content/images/1_a.png"/></li>
+                <li class="ico_2">
+                    <img src="/Content/images/2_a.png"/></li>
+                <li class="ico_3">
+                    <img src="/Content/images/3_a.png"/></li>
             </ul>
             @Html.HiddenFor(model => model.Rating)
             @Html.ValidationMessageFor(model => model.Rating)
 
-            <div class="preguntas">
-                @Html.LabelFor(model => model.HospitalName)
-                @Html.TextBoxFor(model => model.HospitalName, new {@placeholder = "Hospital/Clinic"})
+        <div class="contenedor_formulario">
+            <span class="input input--akira">
+                @Html.TextBoxFor(model => model.HospitalName, new {@class = "input__field input__field--akira", @id = "input-22"})
+                <label class="input__label input__label--akira" for="input-22">
+					<span class="input__label-content input__label-content--akira">Hospital/Clinic name</span>
+				</label>
+            </span>
 
-                @Html.LabelFor(model => model.Comments)
-                @Html.TextAreaFor(model => model.Comments, new {@placeholder = "Comments"})
-            </div>
-            <input type="submit" value="send rating">
+            @Html.TextAreaFor(model => model.Comments, new {@placeholder = "Any comments?"})
+            <input type="submit" name="submit" id="submit"  value="SEND RATING">
         </div>
-
-        <div class="img_enfermera">
-            <img src="/Content/images/enfermera.png" /></div>
-        <div class="sombra_contenedor"></div>
     </div>
 }

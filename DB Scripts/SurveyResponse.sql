@@ -1,4 +1,4 @@
-/****** Object:  Table [dbo].[SurveyResponse]    Script Date: 05/06/2015 16:21:57 ******/
+/****** Object:  Table [dbo].[SurveyResponse]    Script Date: 05/25/2015 17:38:06 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -14,7 +14,6 @@ CREATE TABLE [dbo].[SurveyResponse](
 	[Rating] [varchar](20) NOT NULL,
 	[HospitalName] [varchar](255) NULL,
 	[Comments] [nvarchar](max) NULL,
-	[CallBack] [bit] NOT NULL,
 	[DateCreated] [datetime] NOT NULL,
 	[DateModified] [datetime] NOT NULL,
 	[UserCreated] [nvarchar](40) NOT NULL,
@@ -48,4 +47,5 @@ GO
 
 ALTER TABLE [dbo].[SurveyResponse] ADD  CONSTRAINT [SurveyResponse_UserModified]  DEFAULT (suser_sname()) FOR [UserModified]
 GO
+
 

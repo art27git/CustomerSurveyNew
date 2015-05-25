@@ -28,9 +28,8 @@ namespace CustomerSurvey.Domain.Repositories
                                                           "@EmployeeID = {0}," +
                                                           "@Rating = {1}," +
                                                           "@HospitalName = {2}," +
-                                                          "@Comments = {3}," +
-                                                          "@CallBack = {4}",
-                                                          employeeID, surveyResponse.Rating, surveyResponse.HospitalName, surveyResponse.Comments, surveyResponse.CallBack);
+                                                          "@Comments = {3}",
+                                                          employeeID, surveyResponse.Rating, surveyResponse.HospitalName, surveyResponse.Comments);
             }
 
         }
@@ -38,7 +37,7 @@ namespace CustomerSurvey.Domain.Repositories
 
         public IEnumerable<Employee> GetAllEmployees()
         {
-            var result = db.Database.SqlQuery<Employee>("exec up_getCategories").ToList();
+            var result = db.Database.SqlQuery<Employee>("exec up_getEmployees").ToList();
             return result;
         }
 

@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Linq;
+using System.Web.Mvc;
 using CustomerSurvey.Domain.Repositories;
 using CustomerSurvey.Dto;
 using CustomerSurvey.Helpers;
@@ -24,7 +25,7 @@ namespace CustomerSurvey.Controllers
             }
             else
             {
-                return View("Error");   
+                return View("InvalidSurveyPage");   
             }
         }
 
@@ -43,6 +44,12 @@ namespace CustomerSurvey.Controllers
         public ActionResult Complete()
         {
             return View("Complete");
+        }
+
+        [HttpGet]
+        public ActionResult Index()
+        {
+            return View(siteRepository.GetAllSurveyResponses().ToList());
         }
 
         //public ActionResult Import()

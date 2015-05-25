@@ -9,13 +9,12 @@ CREATE proc [dbo].[up_addSurveyResponse]
 @EmployeeID int,
 @Rating varchar(20),
 @HospitalName varchar(255) = null,
-@Comments nvarchar(max) = null,
-@CallBack bit = 0
+@Comments nvarchar(max) = null
 )
 as
 
-insert into dbo.SurveyResponse(EmployeeID, Rating, HospitalName, Comments, CallBack)
-	values(@EmployeeID, @Rating, @HospitalName, @Comments, @CallBack)
+insert into dbo.SurveyResponse(EmployeeID, Rating, HospitalName, Comments)
+	values(@EmployeeID, @Rating, @HospitalName, @Comments)
 
 GO
 
