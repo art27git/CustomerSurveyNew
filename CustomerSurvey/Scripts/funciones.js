@@ -39,14 +39,17 @@ $(document).ready(function(e) {
 			$(this).find('img').attr('src', '/Content/images/1_b.png');
 			$('.ico_califica li.ico_2').find('img').attr('src', '/Content/images/2_a.png');
 			$('.ico_califica li.ico_3').find('img').attr('src', '/Content/images/3_a.png');
+		    $('#Rating').val('Thumbs Up');
 		}else if(ob == 'ico_2'){
 		    $(this).find('img').attr('src', '/Content/images/2_b.png');
 		    $('.ico_califica li.ico_1').find('img').attr('src', '/Content/images/1_a.png');
 		    $('.ico_califica li.ico_3').find('img').attr('src', '/Content/images/3_a.png');
+			$('#Rating').val('Thumbs Neutral');
 		}else if(ob == 'ico_3'){
 		    $(this).find('img').attr('src', '/Content/images/3_b.png');
-			$('.ico_califica li.ico_1').find('img').attr('src', '/Content/images/1_a.png');
-			$('.ico_califica li.ico_2').find('img').attr('src', '/Content/images/2_a.png');
+		    $('.ico_califica li.ico_1').find('img').attr('src', '/Content/images/1_a.png');
+		    $('.ico_califica li.ico_2').find('img').attr('src', '/Content/images/2_a.png');
+			$('#Rating').val('Thumbs Down');
 		}
 	});
 	
