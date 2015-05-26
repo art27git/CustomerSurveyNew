@@ -12,9 +12,9 @@ img { border: none; width: 100%; }
 /* CONTENEDOR FORMULARIO */
 .contenedor { display: block; position: absolute; width: 780px; height: 640px; left: calc((100% - 780px) / 2); top: calc((100% - 640px) / 2); }
 .title { color: #FFF; font-size: 28px; text-align: center; margin-top: 20px; }
-.ico_califica{ width: 480px; overflow: hidden; margin: 0px auto; margin-top: 60px; }
+.ico_califica{ width: 480px; overflow: hidden; margin: 0px auto; margin-top: 30px; }
 .ico_califica li { float: left; width: 103px; margin-left: 40px; cursor: pointer; }
-.contenedor_formulario { width: 400px; margin: 0px auto; margin-top: 50px; background: url('/Content/images/fondo_formulario.png') repeat; padding: 20px 60px 20px 60px; }
+.contenedor_formulario { width: 400px; margin: 0px auto; margin-top: 30px; background: url('/Content/images/fondo_formulario.png') repeat; padding: 20px 60px 20px 60px; }
 textarea {  border: 2px solid #FFF;  -webkit-border-radius: 7px; -moz-border-radius: 7px; border-radius: 7px; background: none; margin: 1em; width: calc(93% - 2em); resize: none; height: 150px; font-size: 16px; color: #FFF; text-transform: uppercase; font-weight: bold; padding: 10px; font-family: 'Open Sans', sans-serif; }
 
 input[type="submit"] { color: #089bd8; background: #fff; border: none; font-size: 18px; border: 2px solid #FFF; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; margin: 0px auto; display: block; font-family: 'Open Sans', sans-serif; font-weight: bold; padding: 3px 20px 3px 20px; cursor: pointer; }
