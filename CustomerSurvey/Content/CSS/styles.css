@@ -3,21 +3,28 @@
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
 
 /* GENERALES */
-html { background: url('/Content/images/fondo.jpg') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
-body { padding: 0; margin: 0; font-family: 'Roboto', sans-serif;  }
+html { padding: 0; margin: 0; }
+body { padding: 0; margin: 0; font-family: 'Roboto', sans-serif; background: #f4f4f4; }
 ul { padding: 0; margin: 0; }
 li { list-style: none; }
 img { border: none; width: 100%; }
+.clear { clear: both; height: 0; }
 
 /* CONTENEDOR FORMULARIO */
-.contenedor { display: block; position: absolute; width: 780px; height: 640px; left: calc((100% - 780px) / 2); top: calc((100% - 640px) / 2); }
-.title { color: #FFF; font-size: 28px; text-align: center; margin-top: 20px; }
-.ico_califica{ width: 480px; overflow: hidden; margin: 0px auto; margin-top: 30px; }
-.ico_califica li { float: left; width: 103px; margin-left: 40px; cursor: pointer; }
-.contenedor_formulario { width: 400px; margin: 0px auto; margin-top: 30px; background: url('/Content/images/fondo_formulario.png') repeat; padding: 20px 60px 20px 60px; }
-textarea {  border: 2px solid #FFF;  -webkit-border-radius: 7px; -moz-border-radius: 7px; border-radius: 7px; background: none; margin: 1em; width: calc(93% - 2em); resize: none; height: 150px; font-size: 16px; color: #FFF; text-transform: uppercase; font-weight: bold; padding: 10px; font-family: 'Open Sans', sans-serif; }
+/*.contenedor { display: block; position: absolute; width: 780px; height: 640px; left: calc((100% - 780px) / 2); top: calc((100% - 640px) / 2); }*/
+.contenedor { display: block; position: relative; width: 501px; margin: 0px auto; background: #009bd4; padding: 30px 0px 30px 0px; -webkit-border-radius: 7px; -moz-border-radius: 7px; border-radius: 7px; border-bottom: 5px solid #0077b5; margin-top: 20px; }
+.texto_principal { margin: 0px auto; font-family: 'Open Sans', sans-serif; color: #4d4d4d; font-size: 12px; width: 680px; text-align: center; margin-top: 20px; }
+.title { color: #FFF; font-size: 23px; text-align: center; }
+.ico_califica{ width: 420px; margin: 30px auto; }
+.ico_califica li { float: left; width: 70px; margin-left: 51px; cursor: pointer; text-align: center; }
+.ico_califica li img { width: 70px; }
+.ico_califica li img:hover { -webkit-transform: scale(1.3); transform: scale(1.3); }
+.ico_califica_activo { -webkit-transform: scale(1.3); transform: scale(1.3); }
 
-input[type="submit"] { color: #089bd8; background: #fff; border: none; font-size: 18px; border: 2px solid #FFF; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; margin: 0px auto; display: block; font-family: 'Open Sans', sans-serif; font-weight: bold; padding: 3px 20px 3px 20px; cursor: pointer; }
+.contenedor_formulario { width: 356px; margin: 0px auto; background: url('../img/fondo_formulario.png') repeat; padding: 30px; margin-top: 30px; }
+textarea {  border: 2px solid #FFF;  -webkit-border-radius: 7px; -moz-border-radius: 7px; border-radius: 7px; background: none; margin: 1em; width: calc(93% - 2em); resize: none; height: 110px; font-size: 12px; color: #FFF; text-transform: uppercase; font-weight: bold; padding: 10px; font-family: 'Open Sans', sans-serif; }
+
+input[type="submit"] { color: #089bd8; background: #fff; border: none; font-size: 14px; border: 2px solid #FFF; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; margin: 0px auto; display: block; font-family: 'Open Sans', sans-serif; font-weight: bold; padding: 3px 50px 3px 50px; cursor: pointer; }
 ::-webkit-input-placeholder { color: #FFF; }
 :-moz-placeholder { /* Firefox 18- */ color: #FFF; }
 ::-moz-placeholder {  /* Firefox 19+ */ color: #FFF; }
@@ -28,12 +35,12 @@ input[type="submit"] { color: #089bd8; background: #fff; border: none; font-size
 .input__field { border: none; }
 .input__field:focus { outline: none; }
 .input__label { display: inline-block; float: right; padding: 0 1em; width: 40%; color: #6a7989; font-weight: bold; font-size: 60%; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none;  user-select: none; }
-.input__label-content { position: relative; display: block; text-align: left; padding: 15px 20px 15px 20px; font-size: 16px; }
+.input__label-content { position: relative; display: block; text-align: left; padding: 10px; font-size: 12px; }
 
 /* Akira */
-.input--akira { margin-top: 2em; }
-.input__field--akira { position: absolute; top: 0; left: 0; z-index: 10; display: block; width: 90%; height: 100%; background: transparent; text-align: left; color: #FFF; font-size: 16px;text-transform: uppercase; font-weight: bold; padding: 0px 20px 0px 20px; font-family: 'Open Sans', sans-serif; }
-.input__label--akira { padding: 0; width: 100%; background: transparent; color: #FFF; cursor: text; border: 2px solid #FFF; -webkit-border-radius: 7px; -moz-border-radius: 7px; border-radius: 7px; text-transform: uppercase; font-size: 16px; font-family: 'Open Sans', sans-serif; }
+.input--akira {  }
+.input__field--akira { position: absolute; top: 0; left: 0; z-index: 10; display: block; width: 90%; height: 100%; background: transparent; text-align: left; color: #FFF; font-size: 12px;text-transform: uppercase; font-weight: bold; padding: 0px 10px 0px 10px; font-family: 'Open Sans', sans-serif; }
+.input__label--akira { padding: 0; width: 100%; background: transparent; color: #FFF; cursor: text; border: 2px solid #FFF; -webkit-border-radius: 7px; -moz-border-radius: 7px; border-radius: 7px; text-transform: uppercase; font-size: 12px; font-family: 'Open Sans', sans-serif; }
 .input__label--akira::before { /*content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #2f3238; -webkit-transform: scale3d(0.97, 0.85, 1); transform: scale3d(0.97, 0.85, 1); -webkit-transition: -webkit-transform 0.3s; transition: transform 0.3s;*/ }
 .input__label-content--akira { -webkit-transition: -webkit-transform 0.3s; transition: transform 0.3s; }
 .input__field--akira:focus + .input__label--akira::before, .input--filled .input__label--akira::before { -webkit-transform: scale3d(0.99, 0.95, 1); transform: scale3d(0.99, 0.95, 1); }
@@ -42,24 +49,29 @@ input[type="submit"] { color: #089bd8; background: #fff; border: none; font-size
 
 @media screen and (min-width: 320px) and (max-width: 479px) {
 	.contenedor { width: 90%; left: 0; top: 0; position: relative; margin: 0 auto; }
-	.contenedor_formulario { width: 100%; padding: 0; margin-top: 35px; padding-bottom: 10px; }
+	.contenedor_formulario { width: 90%; padding: 0; margin-top: 35px; padding-bottom: 10px; padding-top: 20px; }
 	.ico_califica { width: 280px; margin-top: 30px; }
 	.ico_califica li { width: 80px; margin-left: 9px; }
-	input[type="submit"] { width: 100%; }
+	input[type="submit"] { width: 90%; }
+	.ico_califica li img { width: 60px; }
+	.title { font-size: 19px; }
+	.texto_principal { width: 90%; }
 }
 
 @media screen and (min-width: 480px) and (max-width: 599px) {
 	.contenedor { width: 90%; left: 0; top: 0; position: relative; margin: 0 auto; }
-	.contenedor_formulario { width: 100%; padding: 0; margin-top: 35px; padding-bottom: 10px; }
+	.contenedor_formulario { width: 90%; padding: 0; margin-top: 35px; padding-bottom: 10px; }
 	.ico_califica { width: 350px; margin-top: 30px; }
 	.ico_califica li { width: 90px; margin-left: 18px; }
+	.texto_principal { width: 90%; }
 }
 
 @media screen and (min-width: 600px) and (max-width: 1023px) {
 	.contenedor { width: 580px; left: 0; top: 0; position: relative; margin: 0 auto; }
-	.contenedor_formulario { width: 100%; padding: 0; margin-top: 35px; padding-bottom: 10px; }
+	.contenedor_formulario { width: 90%; padding: 0; margin-top: 35px; padding-bottom: 10px; }
 	.ico_califica { width: 400px; margin-top: 30px; }
 	.ico_califica li { width: 100px; margin-left: 24px; }
+	.texto_principal { width: 90%; }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1439px) {}
