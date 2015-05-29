@@ -10,16 +10,16 @@
     @Html.ValidationSummary(true)
     <div class="contenedor">
         <div class="title">How satisfied are you with our services?</div>
-            <ul class="ico_califica">
-                <li class="ico_1">
-                    <img src="/Content/images/1_a.png"/></li>
-                <li class="ico_2">
-                    <img src="/Content/images/2_a.png"/></li>
-                <li class="ico_3">
-                    <img src="/Content/images/3_a.png"/></li>
-            </ul>
-            @Html.HiddenFor(model => model.Rating)
-            @Html.ValidationMessageFor(model => model.Rating)
+        <ul class="ico_califica">
+            <li class="ico_1">
+                <img src="/Content/images/1_a.png"/></li>
+            <li class="ico_2">
+                <img src="/Content/images/2_a.png"/></li>
+            <li class="ico_3">
+                <img src="/Content/images/3_a.png"/></li>
+        </ul>
+        @Html.HiddenFor(model => model.Rating)
+        @Html.ValidationMessageFor(model => model.Rating)
 
         <div class="contenedor_formulario">
             <span class="input input--akira">
@@ -30,7 +30,15 @@
             </span>
 
             @Html.TextAreaFor(model => model.Comments, new {@placeholder = "Any comments?"})
-            <input type="submit" name="submit" id="submit"  value="SEND RATING">
+            <input type="submit" name="submit" id="submit" value="SEND RATING">
+        </div>
+    </div>
+    <div class="disclaimers">
+        <div>
+            This is an anonymous survey but you can contact us at <a href="mailto:ukcustomersupport@bayer.com">ukcustomersupport@bayer.com</a> Tel: +44(0)1635 563999
+        </div>
+        <div>
+            If your message includes the report of Adverse Events (AE) or any safety information, please immediately send this information to: <a href="mailto:pvuk@bayer.com">pvuk@bayer.com</a>
         </div>
     </div>
 }
